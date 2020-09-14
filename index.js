@@ -55,9 +55,12 @@ const questions = [
 
   // function to write README file
 function writeToFile(filename, data) {
-  fs.appendFile("README.md", "utf8", (err) => {
+  
+  fs.appendFile("README.md", data, (err) => {
     if (err) {
       throw err;
+    } else {
+      console.log("Succesfully created file")
     }
 
   })
@@ -65,6 +68,10 @@ function writeToFile(filename, data) {
 
 // function to initialize program
 function init() {
+  inquirer.prompt(questions)
+  .then(answers => {
+    console.log(answers)
+  })
 
 }
 
