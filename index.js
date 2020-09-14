@@ -55,6 +55,12 @@ const questions = [
 
   // function to write README file
 function writeToFile(filename, data) {
+  fs.appendFile("README.md", "utf8", (err) => {
+    if (err) {
+      throw err;
+    }
+
+  })
 }
 
 // function to initialize program
