@@ -1,7 +1,7 @@
-const license = require("./license.js");
-
 // function to generate markdown for README
 function generateMarkdown(data) {
+
+    ![screenshot]("./assets/Readme_screenshot.png")
    
   return `
   # Title: ${data.title}
