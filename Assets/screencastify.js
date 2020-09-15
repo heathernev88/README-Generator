@@ -1,4 +1,4 @@
 
-![screencastify]("./assets/screencastify.webm")
+![screencastify]("./assets/screencastify.gif")
 
 
