@@ -37,7 +37,7 @@ const questions = [
     },
     {
       type: "input",
-      message: "Please provide contribution guidelines",
+      message: "Please list contributors, if any",
       name: "contribution"
     },
     {
@@ -48,7 +48,7 @@ const questions = [
     {
       type: 'list',
       message: 'Please choose a license from the following: (use arrow to choose response)',
-      choices: ['MIT', 'Apache', 'GNU GPLv3'],
+      choices: ['MIT', 'Apache License 2.0', 'GNU GPLv3'],
       name: 'license'
   }
 
@@ -72,14 +72,14 @@ function init() {
   inquirer.prompt(questions)
   .then(answers => {
     console.log(answers)
-    fs.appendFile("README.md", generateMarkdown(answers), (err) => {
+    fs.writeFile("README.md", generateMarkdown(answers), (err) => {
       if (err) {
         throw err
       }
     })
   })
   
-}
+};
 
 // function call to initialize program
 init();
